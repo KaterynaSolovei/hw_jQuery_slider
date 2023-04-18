@@ -2,9 +2,26 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+.bg {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0.2;
+  z-index: -2;
+  background-size: contain;
+  background-image: url(../pic/travel_pattern.jpg);
+}
+
 .container {
   width: min(100% - 40px, 1280px);
   margin-inline: auto;
+  contain: content;
 }
 
 .slide:nth-of-type(1) {
@@ -47,19 +64,20 @@
   background-image: url(../pic/pic_10.png);
 }
 
-
 .slides {
   align-items: stretch;
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  height: 250px;
+  width: 300px;
+  box-sizing: border-box;
 }
 
 .slide {
   background-size: contain;
-  height: 150px;
-  width: 200px;
+  height: 250px;
+  width: 300px;
   box-sizing: border-box;
   position: absolute;
   background-size: cover;
@@ -74,22 +92,25 @@
 }
 
 .controls {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  display: inline-flex;
 }
 
 .control {
   padding: 0.25em 0.5em;
-  background-color: #92f379;
-  max-width: 70px;
-  min-height: 10px;
-  display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   cursor: pointer;
-  border: 1px solid #000000;
   font-size: 20px;
+}
+
+.controls_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: center;
+  position: absolute;
 }
 
 .list_item.active {
@@ -108,4 +129,39 @@
   text-align: center;
   margin-bottom: 50px;
   margin-top: 40px;
+  font-size: large;
+}
+
+.carousel_pictures {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  padding: 26px 26px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.control-prev {
+  padding: 115px 40px;
+}
+
+.control-prev:hover {
+  color: palevioletred;
+}
+
+.control-next {
+  padding: 115px 40px;
+}
+
+.control-next:hover {
+  color: palevioletred;
+}
+
+.control-pause {
+  padding: 115px 115px;
 }
