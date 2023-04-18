@@ -140,10 +140,10 @@ body {
 }
 
 .footer {
-  padding: 26px 26px;
-  position: relative;
+  min-height: 12vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .control-prev {
