@@ -124,12 +124,12 @@ body {
 }
 
 .topic {
+  font-size: 27px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 800;
   text-align: center;
   margin-bottom: 40px;
   margin-top: 40px;
-  font-size: 27px;
 }
 
 .carousel_pictures {
