@@ -1,4 +1,4 @@
-const $slides = $(".slide");
+const $slides = $('.slide');
 const $pauseBtn = $('#pause-btn');
 const $prevBtn = $('#prev-btn');
 const $nextBtn = $('#next-btn');
@@ -17,41 +17,41 @@ function gotoSlide(n) {
   $listItem.eq(currentSlide).toggleClass('active');
 }
 
-function prevSlide(){
-  gotoSlide(currentSlide - 1); 
+function prevSlide() {
+  gotoSlide(currentSlide - 1);
 }
 
-function nextSlide(){
+function nextSlide() {
   gotoSlide(currentSlide + 1);
 }
 
-function prevHandler(){
+function prevHandler() {
   pauseHandler();
   prevSlide();
 }
 
-function nextHandler(){
-pauseHandler();
-nextSlide();
+function nextHandler() {
+  pauseHandler();
+  nextSlide();
 }
 
-function pauseHandler(){
+function pauseHandler() {
   if (isPlaying) {
-  clearInterval(timerID);
+    clearInterval(timerID);
     isPlaying = false;
     $pauseBtn.html('');
-}
+  }
 }
 
-function playHandler(){
+function playHandler() {
   timerID = setInterval(nextSlide, 2000);
-    isPlaying = true;
-    $pauseBtn.html('');
+  isPlaying = true;
+  $pauseBtn.html('');
 }
 
-function pausePlayHandler(){
+function pausePlayHandler() {
   if (isPlaying) {
-   pauseHandler();
+    pauseHandler();
   } else {
     playHandler();
   }
